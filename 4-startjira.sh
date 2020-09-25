@@ -26,6 +26,6 @@ jiraName="atlassian-jira-software-$jiraVersionMajMin"
 rootInstallDir="/opt/bsaitmod"
 
 # Set the Jira HOME directory
-sudo -u jira sh -c "export JAVA_HOME=/opt/bsaitmod/atlassian/jira/jre && export JIRA_HOME=/var/atlassian/application-data/jira && set DISABLE_NOTIFICATIONS=' -Datlassian.mail.senddisabled=true -Datlassian.mail.fetchdisabled=true -Datlassian.mail.popdisabled=true' && /opt/bsaitmod/$jiraName-standalone/bin/start-jira.sh"
+sudo -i -u jira sh -c "export JAVA_HOME=/opt/bsaitmod/atlassian/jira/jre && export JIRA_HOME=/var/atlassian/application-data/jira && set DISABLE_NOTIFICATIONS=' -Datlassian.mail.senddisabled=true -Datlassian.mail.fetchdisabled=true -Datlassian.mail.popdisabled=true' && /opt/bsaitmod/$jiraName-standalone/bin/start-jira.sh"
 
 

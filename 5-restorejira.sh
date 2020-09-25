@@ -27,8 +27,8 @@ rootInstallDir="/opt/bsaitmod"
 homeDir="/var/atlassian/application-data/jira"
 backupDir="/var/backup/$jiraBackupName/jira"
 
-cp $backupDir/export/jira-backup* $homeDir/import
+sudo cp $backupDir/export/jira-backup* $homeDir/import
 
-cp -Rf $backupDir/data/* $homeDir/data
-
+sudo cp -Rf $backupDir/data/* $homeDir/data
+sudo chown -R jira:jira $homeDir
 

@@ -16,14 +16,13 @@ fi
 
 jiraName="jira$jiraVersion"
 jiradbName="jiradb$jiraVersion.bak"
-
-sudo -u jira sh -c "/opt/bsaitmod/atlassian/jira/bin/stop-jira.sh";
+ 
+sudo -i -u jira  sh -c "/opt/bsaitmod/atlassian/jira/bin/stop-jira.sh";
 #Copy the attachment directory.  As root, make the backup directory and copy the <JIRA>/data directory
-sudo  sh -c "mkdir -p /var/backup/$jiraName && chmod -777 /var/backup/$jiraName && cp -Rf /var/atlassian/application-data/jira /var/backup/$jiraName/";
+sudo -i  sh -c "mkdir -p /var/backup/$jiraName && chmod -777 /var/backup/$jiraName && cp -Rf /var/atlassian/application-data/jira /var/backup/$jiraName/";
 
 #backup the postgres db
 #See instructions from https://www.linode.com/docs/databases/postgresql/how-to-back-up-your-postgresql-database/
 
-sudo -u postgres sh -c "pg_dump jiradb > ~/$jiradbName";
-exit 
+sudo -i -u postgres sh -c "pg_dump jiradb > ~/$jiradbName";
 
