@@ -17,9 +17,9 @@ fi
 jiraName="jira$jiraVersion"
 jiradbName="jiradb$jiraVersion.bak"
 
-if [ $jiraVersion==6.3 ]
-then 
-sudo -i -u jira  sh -c "/opt/bsaitmod/atlassian/jira/bin/stop-jira.sh";
+if [ "$jiraVersion" == 6.3 ] 
+then
+sudo -i -u jira  sh -c "/opt/bsaitmod/atlassian/jira/bin/stop-jira.sh"
 else
 sudo -i -u jira  sh -c "export JAVA_HOME=/opt/bsaitmod/atlassian/jira/jre && export JIRA_HOME=/var/atlassian/application-data/jira && /opt/bsaitmod/atlassian-jira-software-$jiraVersion*-standalone/bin/stop-jira.sh";
 fi
