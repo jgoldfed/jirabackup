@@ -17,7 +17,7 @@ fi
 jiraName="jira$jiraVersion"
 jiradbName="jiradb$jiraVersion.bak"
 
-if $jiraVersion==6.3
+if [ $jiraVersion==6.3 ]
 then 
 sudo -i -u jira  sh -c "/opt/bsaitmod/atlassian/jira/bin/stop-jira.sh";
 else
