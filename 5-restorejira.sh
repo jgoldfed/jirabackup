@@ -31,4 +31,6 @@ sudo cp $backupDir/export/jira-backup* $homeDir/import
 
 sudo cp -Rf $backupDir/data/* $homeDir/data
 sudo chown -R jira:jira $homeDir
+echo 'Backup files restored to directory. Please enter the .zip file below when prompted:'
+ls -1 $homeDir/import/jira-backup*.zip | tr '\n' '\0' | xargs -0 -n 1 basename
 
