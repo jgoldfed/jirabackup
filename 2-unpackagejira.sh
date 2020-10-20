@@ -24,7 +24,6 @@ jiraName="atlassian-jira-software-$jiraVersionMajMin"
 
 
 rootInstallDir="/opt/bsaitmod"
-wget -O $rootInstallDir/$jiraName.tar.gz https://www.atlassian.com/software/jira/downloads/binary/$jiraName.tar.gz
 chmod +x $rootInstallDir/$jiraName.tar.gz
 
 # The next step will create directory "$jiraName-standalone"

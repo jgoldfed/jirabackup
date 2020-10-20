@@ -17,6 +17,6 @@ if [ $jiraVersion == "7.13" ]; then jiraBackupVersion="7.0";  fi
 if [ $jiraVersion == "8.8" ]; then jiraBackupVersion="7.13"; fi
 
 ./1-backupjira.sh $jiraBackupVersion
-./2-upgradejira.sh $jiraVersion
+./2-unpackagejira.sh $jiraVersion
 ./3-preparejira.sh
 ./4-startjira.sh $jiraVersion
