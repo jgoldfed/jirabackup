@@ -1,4 +1,4 @@
-# jirabackup
+# Jira Backup
 
 This file allows you to upgrade your Jira instance through the step-by-step process defined in https://confluence.atlassian.com/adminjiraserver0713/upgrading-jira-applications-964983182.html.
 For our purposes, we are going to first install Jira v6.3.12 then migration to 7.0.11, then 7.13.0 and finally to our current release of v8.8.0.
